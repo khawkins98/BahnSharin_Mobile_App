@@ -28,6 +28,7 @@
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" gap:role="default" />
+    <!--
     <icon src="res/icon/cordova_android_36.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/cordova_android_48.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/cordova_android_72.png"   gap:platform="android"    gap:density="hdpi" />
@@ -40,6 +41,7 @@
     <icon src="res/icon/cordova_ios_144.png"         gap:platform="ios"        width="144" height="144" />
     <icon src="res/icon/cordova_64.png"          gap:platform="webos" />
     <icon src="res/icon/cordova_48.png"  gap:platform="winphone" />
+    -->
     <!--
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
     -->
