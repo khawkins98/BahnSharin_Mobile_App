@@ -27,7 +27,7 @@
     <gap:platform name="android" />
 
     <!-- Define app icon for each platform. -->
-    <icon src="icon.png" gap:role="default" />
+    <icon src="icon.png" />
     <!--
     <icon src="res/icon/cordova_android_36.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/cordova_android_48.png"   gap:platform="android"    gap:density="mdpi" />
