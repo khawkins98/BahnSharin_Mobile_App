@@ -113,8 +113,113 @@
 <script src="./sites/all/themes/bahnsharing/js/misc.js?n0vvy7"></script>
 <script src="./sites/all/themes/bahnsharing/fastclick/lib/fastclick.js?n0vvy7"></script>
 <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"bahnsharing","theme_token":"PfxGdoSKoYnY7zK_ZXEzNEk3Ni8zB3BM43YMchvplb0","js":{"0":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/countly\/countly.js":1,"sites\/all\/modules\/page_transitions\/page_transitions.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1,"sites\/all\/modules\/hybridauth\/js\/hybridauth.modal.js":1,"sites\/all\/modules\/hybridauth\/js\/hybridauth.onclick.js":1,"sites\/all\/modules\/image_mobile_camera\/image_mobile_camera.js":1,"sites\/all\/modules\/mobile_link_handler\/mobile_link_handler.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/bahnsharing\/perfect-scrollbar-0.4.8\/min\/perfect-scrollbar-0.4.8.min.js":1,"sites\/all\/themes\/bahnsharing\/perfect-scrollbar-0.4.8\/min\/perfect-scrollbar-0.4.8.with-mousewheel.min.js":1,"sites\/all\/themes\/bahnsharing\/js\/bootstrap.min.js":1,"sites\/all\/themes\/bahnsharing\/js\/slideoutnav.js":1,"sites\/all\/themes\/bahnsharing\/js\/misc.js":1,"sites\/all\/themes\/bahnsharing\/fastclick\/lib\/fastclick.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mobilebahn\/mobilebahn.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/page_transitions\/page_transitions.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"sites\/all\/modules\/hybridauth\/plugins\/icon_pack\/hybridauth_32\/hybridauth_32.css":1,"sites\/all\/modules\/hybridauth\/css\/hybridauth.css":1,"sites\/all\/modules\/hybridauth\/css\/hybridauth.modal.css":1,"public:\/\/ctools\/css\/67fc51e0488e8425806131f81610b5fe.css":1,"sites\/all\/modules\/mobile_link_handler\/mobile_link_handler.css":1,"sites\/all\/themes\/bahnsharing\/css\/bootstrap.css":1,"sites\/all\/themes\/bahnsharing\/css\/style.css":1,"sites\/all\/themes\/bahnsharing\/fonts\/netto.css":1,"sites\/all\/themes\/bahnsharing\/perfect-scrollbar-0.4.8\/min\/perfect-scrollbar-0.4.8.min.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});</script>
+
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64-encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      // console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+
+    </script>
+
+
+
+
+
 </head>
 <body class="html front not-logged-in no-sidebars i18n-en" >
+
+    <button onclick="capturePhoto();">Capture Photo</button> <br>
+    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    <img style="display:none;" id="largeImage" src="" />
+
+
   <div class="mobilewrapper">
     <div id="skip-link">
       <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
