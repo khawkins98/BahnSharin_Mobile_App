@@ -55,6 +55,7 @@
         <param name="ios-package" value="CDVCamera" />
     </feature>
 
-    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.core.camera" />
+    <!-- <gap:plugin name="org.apache.cordova.camera" /> -->
 
 </widget>
