@@ -216,30 +216,6 @@
 </head>
 <body class="html front not-logged-in no-sidebars i18n-en" >
 
-        <iframe width="560" height="315" src="http://bahnsharing.com/de" frameborder="0" style="width:100%; height:100%;"></iframe>
-
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <div class="event received">
-                  <p>Device is Ready</p>
-                </div>
-
-                <button onclick="app.takePicture();">Take Picture</button>
-            </div>
-        </div>
-
-http://orkjern.com/creating-nodes-images-using-phonegap-and-services
-
-http://docs.phonegap.com/en/3.3.0/cordova_camera_camera.md.html#camera.getPicture
-
-    <button onclick="capturePhoto();">Capture Photo</button> <br>
-    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-    <img style="display:none;" id="largeImage" src="" />
 
 
   <div class="mobilewrapper">
@@ -312,6 +288,35 @@ http://docs.phonegap.com/en/3.3.0/cordova_camera_camera.md.html#camera.getPictur
       
   
   <div class="pane-content">
+
+
+
+        <!-- <iframe width="560" height="315" src="http://bahnsharing.com/de" frameborder="0" style="width:100%; height:100%;"></iframe> -->
+
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <div class="event received">
+                  <p>Device is Ready</p>
+                </div>
+
+                <button onclick="app.takePicture();">Take Picture</button>
+            </div>
+        </div>
+    <!-- 
+    http://orkjern.com/creating-nodes-images-using-phonegap-and-services
+
+    http://docs.phonegap.com/en/3.3.0/cordova_camera_camera.md.html#camera.getPicture -->
+
+        <button onclick="capturePhoto();">Capture Photo</button> <br>
+        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+        <img style="display:none;" id="largeImage" src="" />
+
+
 <a href="#" onclick="window.open('http://www.kidzout.com', '_system');">window.open</a>
 
 <a href="#" onclick="navigator.app.loadUrl('https://google.com/', { openExternal:true });">navigator.app.loadUrl</a>
@@ -338,7 +343,7 @@ http://docs.phonegap.com/en/3.3.0/cordova_camera_camera.md.html#camera.getPictur
 </div>
 
 <div class="text-center small page-transition">
-  <a href="http://bahnsharing.com/user/register">create an account with e-mail</a>
+  <a href="#" onclick="window.open('http://bahnsharing.com/user/register', '_blank', 'location=no')">create an account with e-mail</a>
 </div>  </div>
 
   
