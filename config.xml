@@ -19,7 +19,8 @@
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="auto-hide-splash-screen" value="false" />
+    <preference name="splash-screen-duration" value="1000" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
@@ -53,5 +54,12 @@
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         <param name="ios-package" value="CDVCamera" />
     </feature>
+
+    <gap:plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <gap:plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />   
+    <gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <gap:plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+    <gap:plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+    <gap:plugin name="Globalization" value="org.apache.cordova.Globalization" />    
 
 </widget>
