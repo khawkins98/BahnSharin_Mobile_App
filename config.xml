@@ -56,8 +56,8 @@
     </feature>
  -->
     <gap:plugin name="org.apache.cordova.core.camera" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    
+    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
+
 
     <!-- <gap:plugin name="org.apache.cordova.camera" /> -->
 
