@@ -132,17 +132,17 @@
       <a onclick="window.history.back()" href="#" class="backbutton page-transition"><span class="backbuttonicon"></span>Back</a>
       
       <a class="logo page-transition" href="index.html" title="Home">
-        <img src="/sites/all/themes/bahnsharing/img/logo.svg" type="image/svg+xml">
+        <img src="./sites/all/themes/bahnsharing/img/logo.svg" type="image/svg+xml">
       </a>
 
-      <a class="navbar-user-icon page-transition" href="/user" title="My rides">
+      <a class="navbar-user-icon page-transition" href="./user" title="My rides">
 
-        <img src="/sites/all/themes/bahnsharing/img/usericon.svg" type="image/svg+xml">      </a>
+        <img src="./sites/all/themes/bahnsharing/img/usericon.svg" type="image/svg+xml">      </a>
 
               <div id="side-menu" class="">
           <nav role="navigation">
                           <ul class="menu nav"><li class="first leaf"><a href="./en/index.html">Home</a></li>
-<li class="leaf"><a href="/en/user/login" title="">Login or Register</a></li>
+<li class="leaf"><a href="./en/user/login" title="">Login or Register</a></li>
 <li class="leaf"><a href="https://www.facebook.com/bahnsharing" title="">Facebook</a></li>
 <li class="leaf"><a href="./en/content/faq.html">FAQ</a></li>
 <li class="leaf"><a href="./en/content/feedback.html">Feedback</a></li>
@@ -167,10 +167,10 @@
     <section class="span12">  
                   <a id="main-content"></a>
                                       <ul class="nav nav-tabs"><li class=""><a href="/en/user/register">Create new account</a></li>
-<li class="active"><a href="/en/user" class="active">Log in<span class="element-invisible">(active tab)</span></a></li>
-<li class=""><a href="/en/user/password">Request new password</a></li>
+<li class="active"><a href="./en/user" class="active">Log in<span class="element-invisible">(active tab)</span></a></li>
+<li class=""><a href="./en/user/password">Request new password</a></li>
 </ul>                        
-<form action="/en/user?mag=1" method="post" id="user-login" accept-charset="UTF-8"><div><div class="control-group form-type-textfield form-item-name form-item">
+<form action="./en/user?mag=1" method="post" id="user-login" accept-charset="UTF-8"><div><div class="control-group form-type-textfield form-item-name form-item">
   <label for="edit-name" class="control-label">E-mail <span class="form-required" title="This field is required.">*</span></label>
 <div class="controls"> <input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" />
 <p class="help-block">Enter your e-mail address.</p>
@@ -182,7 +182,7 @@
 </div></div>
 <input type="hidden" name="form_build_id" value="form-ZQ-HRH8gg5q4VIrglRfwSAsvpjtzPaG2AiBpZcxT9_k" />
 <input type="hidden" name="form_id" value="user_login" />
-<div class="hybridauth-widget-wrapper"><h3></h3><ul class="hybridauth-widget"><li class="first last"><a href="/en/hybridauth/window/Facebook?destination=user%3Fmag%3D1%26mag_q%3Duser&amp;destination_error=user%3Fmag%3D1%26mag_q%3Duser" title="Facebook" class="hybridauth-widget-provider hybridauth-onclick-current" rel="nofollow" data-hybridauth-provider="Facebook" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500"><span class="hybridauth-icon hybridauth-icon-hybridauth-32 hybridauth-facebook hybridauth-facebook-hybridauth-32" title="Facebook"></span></a></li>
+<div class="hybridauth-widget-wrapper"><h3></h3><ul class="hybridauth-widget"><li class="first last"><a href="./en/hybridauth/window/Facebook?destination=user%3Fmag%3D1%26mag_q%3Duser&amp;destination_error=user%3Fmag%3D1%26mag_q%3Duser" title="Facebook" class="hybridauth-widget-provider hybridauth-onclick-current" rel="nofollow" data-hybridauth-provider="Facebook" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500"><span class="hybridauth-icon hybridauth-icon-hybridauth-32 hybridauth-facebook hybridauth-facebook-hybridauth-32" title="Facebook"></span></a></li>
 </ul></div><button class="btn form-submit" id="edit-submit" name="op" value="Log in" type="submit">Log in</button>
 </div></form>    </section>
 
@@ -201,7 +201,7 @@
 <section id="block-block-2" class="block block-block clearfix">
 
       
-  <a href="/user/register">
+  <a href="./user/register">
 Create an account</a>  
 </section> <!-- /.block -->
 <div id="circleG" class="spinner-css">
