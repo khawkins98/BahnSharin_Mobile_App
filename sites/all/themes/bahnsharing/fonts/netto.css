@@ -1,0 +1,37 @@
+
+  @font-face {
+    font-family: 'NettoIconsOT';
+    src: url('NettoIconsOT.eot');
+    src: local('☺'), url('NettoIconsOT.woff') format('woff'), url('NettoIconsOT.ttf') format('truetype'), url('NettoIconsOT.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /** fix for webkit browser failing to render font */
+
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+    font-family: 'NettoIconsOT';
+    src: url('NettoIconsOT.svg') format('svg');
+
+    }
+  }
+
+/* disabled as we use typekit
+  @font-face {
+    font-family: 'NettoOT';
+    src: url('NettoOT.eot');
+    src: local('☺'), url('NettoOT.woff') format('woff'), url('NettoOT.ttf') format('truetype'), url('NettoOT.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NettoOTBold';
+    src: url('NettoOT-Bold.eot');
+    src: local('☺'), url('NettoOT-Bold.woff') format('woff'), url('NettoOT-Bold.ttf') format('truetype'), url('NettoOT-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+*/
