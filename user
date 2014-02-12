@@ -170,7 +170,7 @@
 <li class="active"><a href="./en/user" class="active">Log in<span class="element-invisible">(active tab)</span></a></li>
 <li class=""><a href="./en/user/password">Request new password</a></li>
 </ul>                        
-<form action="./en/user?mag=1" method="post" id="user-login" accept-charset="UTF-8"><div><div class="control-group form-type-textfield form-item-name form-item">
+<form action="http://bahnsharing.com/en/user" method="post" id="user-login" accept-charset="UTF-8"><div><div class="control-group form-type-textfield form-item-name form-item">
   <label for="edit-name" class="control-label">E-mail <span class="form-required" title="This field is required.">*</span></label>
 <div class="controls"> <input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" />
 <p class="help-block">Enter your e-mail address.</p>
