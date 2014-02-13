@@ -63,12 +63,20 @@ var app = {
 
 // Adds a function to easily open links inapp (no browser select prompt or open with safari)
 jQuery(document).ready(function ($) {
+
+  // track the last page the user was on so we can always shortciruit undesired pages in the main frame
+  var lastPage = 'http://bahnsharing.com';
+
   $(".in-app a").click(function(e){
     // alert('test');
     // console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
 
-    ref.addEventListener('loadstart', function(event) { alert(event.url); checkURL(event.url);  });
+    ref.addEventListener('loadstart', function(event) { 
+        alert(event.url); 
+        checkURL(event.url);  
+    });
+
     // ref.addEventListener('loadstop', function() {
     //     // ref.executeSript({file: "./js/link_handler.js"});
     //     alert('scriot loaded' . event.url);
@@ -91,11 +99,13 @@ jQuery(document).ready(function ($) {
          (destination.indexOf("facebook") != -1) 
          || (destination.indexOf("bahn.de") != -1) 
        ) {
-      window.open('./index.html', '_blank', 'location=no');
+      window.open(lastPage, '_blank', 'location=no');
       window.open(destination, '_system', '');
       // navigator.app.loadUrl(destination, { openExternal:true });
     } 
-    // else {
+    else {
+      lastPage = destination;
+    }
     //   var ref = window.open(destination, '_blank', 'location=no');
 
     //   ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
