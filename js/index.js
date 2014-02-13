@@ -99,15 +99,16 @@ jQuery(document).ready(function ($) {
          (destination.indexOf("facebook") != -1) 
          || (destination.indexOf("bahn.de") != -1) 
        ) {
+      window.open(destination, '_system', '');
+      // navigator.app.loadUrl(destination, { openExternal:true });
       var ref = window.open(lastPage, '_blank', 'location=no');
       ref.addEventListener('loadstart', function(event) { 
         checkURL(event.url);  
       });
-      window.open(destination, '_system', '');
-      // navigator.app.loadUrl(destination, { openExternal:true });
     } 
     else {
       lastPage = destination;
+      alert(lastPage . ' saved');
     }
     //   var ref = window.open(destination, '_blank', 'location=no');
 
