@@ -336,13 +336,14 @@
 </div>
 
 <div class="front-login facebook">
-  <a href="/http://bahnsharing.com/hybridauth/window/Facebook?destination=front" title="Facebook" class="hybridauth-widget-provider page-transition" rel="nofollow" onclick="jQuery(this).parents('.hybridauth-widget').after('&lt;div&gt;' + Drupal.t('Contacting') + ' ' + this.title + '...&lt;/div&gt;');">
-    <a href="http://bahnsharing.com/hybridauth/window/Facebook?destination=front" title="Facebook" rel="nofollow" onclick="jQuery(this).parents('.hybridauth-widget').after('&lt;div&gt;' + Drupal.t('Contacting') + ' ' + this.title + '...&lt;/div&gt;');" class="buttons-social page-transition"></a>
-    <a href="http://bahnsharing.com/hybridauth/window/Facebook?destination=front" title="Facebook" class="login-text page-transition" rel="nofollow" onclick="jQuery(this).parents('.hybridauth-widget').after('&lt;div&gt;' + Drupal.t('Contacting') + ' ' + this.title + '...&lt;/div&gt;');">login with Facebook</a>
+  <a href="#" title="Facebook" class="hybridauth-widget-provider" rel="nofollow" onclick="jQuery(this).parents('.hybridauth-widget').after('&lt;div&gt;' + Drupal.t('Contacting') + ' ' + this.title + '...&lt;/div&gt;'); window.open('http://bahnsharing.com/hybridauth/window/Facebook?destination=front', '_blank', 'location=no');">
+    <a href="#" title="Facebook" rel="nofollow" onclick="jQuery(this).parents('.hybridauth-widget').after('&lt;div&gt;' + Drupal.t('Contacting') + ' ' + this.title + '...&lt;/div&gt;'); window.open('http://bahnsharing.com/hybridauth/window/Facebook?destination=front', '_blank', 'location=no');" class="buttons-social page-transition"></a>
+    <a href="#" title="Facebook" class="login-text page-transition" rel="nofollow" onclick="jQuery(this).parents('.hybridauth-widget').after('&lt;div&gt;' + Drupal.t('Contacting') + ' ' + this.title + '...&lt;/div&gt;'); window.open('http://bahnsharing.com/hybridauth/window/Facebook?destination=front', '_blank', 'location=no');">login with Facebook</a>
   </a>
 </div>
 
-<div class="text-center small page-transition">
+<div class="text-center small "> 
+<!-- page-transition -->
   <a href="#" onclick="window.open('http://bahnsharing.com/user/register', '_blank', 'location=no')">create an account with e-mail</a>
 </div>  </div>
 
