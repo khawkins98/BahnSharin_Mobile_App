@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
     // console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
 
-    ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
+    ref.addEventListener('loadstart', function(event) { alert(event.url); checkURL(event.url);  });
     // ref.addEventListener('loadstop', function() {
     //     // ref.executeSript({file: "./js/link_handler.js"});
     //     alert('scriot loaded' . event.url);
@@ -92,13 +92,14 @@ jQuery(document).ready(function ($) {
          || (destination.indexOf("bahn.de") != -1) 
        ) {
       navigator.app.loadUrl(destination, { openExternal:true });
-    } else {
-      var ref = window.open(destination, '_blank', 'location=no');
+    } 
+    // else {
+    //   var ref = window.open(destination, '_blank', 'location=no');
 
-      ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
-      // window.open(destination, '_blank', 'location=no');
+    //   ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
+    //   // window.open(destination, '_blank', 'location=no');
 
-    }
+    // }
 
   }
 });
