@@ -93,8 +93,9 @@ jQuery(document).ready(function ($) {
        ) {
       navigator.app.loadUrl(destination, { openExternal:true });
     } 
-    // else {
-    //   var ref = window.open(destination, '_blank', 'location=no');
+     else {
+       window.open(destination, '_blank', 'location=no');
+   }
 
     //   ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
     //   // window.open(destination, '_blank', 'location=no');
