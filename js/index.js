@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
     // console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
 
-    // ref.addEventListener('loadstart', function(event) { checkURL(event.url); });
+    ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
     //ref.addEventListener('loadstart', function() { alert(event.url); });
 
 
@@ -77,10 +77,7 @@ jQuery(document).ready(function ($) {
   });
 
   $("a").click(function(e){
-    // console.log(this.href);
-
-    ref.addEventListener('loadstart', function(event) { checkURL(event.url); });
-
+    // all links are being handled by the cordova event listner
     e.preventDefault();
   });
 
