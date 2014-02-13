@@ -108,7 +108,7 @@ jQuery(document).ready(function ($) {
     } 
     else {
       lastPage = destination;
-      alert(lastPage . ' saved');
+      alert(lastPage + ' saved');
     }
     //   var ref = window.open(destination, '_blank', 'location=no');
 
