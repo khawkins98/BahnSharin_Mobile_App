@@ -67,12 +67,24 @@ jQuery(document).ready(function ($) {
     // alert('test');
     console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
-    ref.addEventListener('loadstart', function(event) { alert(event.url); });
+
+
+
+    ref.addEventListener('loadstart', function(event) { checkURL(event.url); });
     //ref.addEventListener('loadstart', function() { alert(event.url); });
 
 
     // window.open(this.href, '_blank', 'location=no');
     e.preventDefault();
   });
+
+  function checkURL(destination) {
+    // console.log('checking');
+    if (destination.indexOf("facebook") != -1) {
+      navigator.app.loadUrl('https://google.com/', { openExternal:true });
+
+    }
+
+  }
 });
 
