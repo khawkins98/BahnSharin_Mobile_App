@@ -63,15 +63,16 @@ var app = {
 
 // Adds a function to easily open links inapp (no browser select prompt or open with safari)
 jQuery(document).ready(function ($) {
-   $(".in-app a").click(function(e){
-     // alert('test');
-     // console.log(this.href);
+  $(".in-app a").click(function(e){
+    // alert('test');
+    console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
     ref.addEventListener('loadstart', function() { alert(event.url); });
+    //ref.addEventListener('loadstart', function() { alert(event.url); });
 
 
-     // window.open(this.href, '_blank', 'location=no');
-     e.preventDefault();
-   });
- });
+    // window.open(this.href, '_blank', 'location=no');
+    e.preventDefault();
+  });
+});
 

@@ -1,0 +1,6 @@
+# OS X
+.DS_Store
+
+# Local debugging
+debugdata.json
+phonegap.js
