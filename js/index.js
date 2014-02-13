@@ -69,17 +69,21 @@ jQuery(document).ready(function ($) {
     var ref = window.open(this.href, '_blank', 'location=no');
 
     ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
-    //ref.addEventListener('loadstart', function() { alert(event.url); });
+    // ref.addEventListener('loadstop', function() {
+    //     // ref.executeSript({file: "./js/link_handler.js"});
+    //     alert('scriot loaded' . event.url);
+    // });
+    // ref.addEventListener('loadstart', function() { alert(event.url); });
 
 
     // window.open(this.href, '_blank', 'location=no');
     e.preventDefault();
   });
 
-  $("a").click(function(e){
-    checkURL(this.href);
-    e.preventDefault();
-  });
+  // $("a").click(function(e){
+  //   checkURL(this.href);
+  //   e.preventDefault();
+  // });
 
   function checkURL(destination) {
     // console.log('checking');
@@ -89,7 +93,10 @@ jQuery(document).ready(function ($) {
        ) {
       navigator.app.loadUrl(destination, { openExternal:true });
     } else {
-      window.open(destination, '_blank', 'location=no');
+      var ref = window.open(destination, '_blank', 'location=no');
+
+      ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
+      // window.open(destination, '_blank', 'location=no');
 
     }
 
