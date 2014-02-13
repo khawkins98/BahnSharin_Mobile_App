@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
          (destination.indexOf("facebook") != -1) 
          || (destination.indexOf("bahn.de") != -1) 
        ) {
-      window.open('/', '_blank', 'location=no');
+      window.open('/index.html', '_blank', 'location=no');
       window.open(destination, '_system', '');
       // navigator.app.loadUrl(destination, { openExternal:true });
     } 
