@@ -66,7 +66,11 @@ jQuery(document).ready(function ($) {
    $(".in-app a").click(function(e){
      // alert('test');
      // console.log(this.href);
-     window.open(this.href, '_blank', 'location=no');
+    var ref = window.open(this.href, '_blank', 'location=no');
+    ref.addEventListener('loadstart', function() { alert(event.url); });
+
+
+     // window.open(this.href, '_blank', 'location=no');
      e.preventDefault();
    });
  });
