@@ -88,7 +88,10 @@ jQuery(document).ready(function ($) {
          || (destination.indexOf("bahn.de") != -1) 
        ) {
       // open this link in the system browser
-  destination = 'fb://page/527039463984441';
+alert(destination);
+// works if fb is installed
+// can check for fb wiht https://build.phonegap.com/plugins/17
+  // destination = 'fb://page/527039463984441';
       window.open(destination, '_system', '');
       // navigator.app.loadUrl(destination, { openExternal:true });
       
