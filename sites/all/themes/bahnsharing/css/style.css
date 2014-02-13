@@ -239,7 +239,7 @@ body.front.not-logged-in #navbar .container {
 /** sprites **/
 
 .buttons-social {
-  background: url('/sites/all/themes/bahnsharing/img/buttons-social.png') no-repeat;
+  background: url('../../../../../sites/all/themes/bahnsharing/img/buttons-social.png') no-repeat;
   display: inline-block;
   height: 62px;
   width: 63px;
@@ -248,7 +248,7 @@ body.front.not-logged-in #navbar .container {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
   .buttons-social {
-      background:url('/sites/all/themes/bahnsharing/img/buttons-social_2x.png') no-repeat top left;
+      background:url('../../../../../sites/all/themes/bahnsharing/img/buttons-social_2x.png') no-repeat top left;
       background-size: 214px 135px;
   }
 }
