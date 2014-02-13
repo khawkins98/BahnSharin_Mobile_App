@@ -89,7 +89,10 @@ jQuery(document).ready(function ($) {
        ) {
       navigator.app.loadUrl(destination, { openExternal:true });
     } else {
-      window.open(destination, '_blank', 'location=no');
+      var ref = window.open(this.href, '_blank', 'location=no');
+
+      ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
+      // window.open(destination, '_blank', 'location=no');
 
     }
 
