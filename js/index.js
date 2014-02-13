@@ -60,3 +60,14 @@ var app = {
       });
     }
 };
+
+// Adds a function to easily open links inapp (no browser select prompt or open with safari)
+jQuery(document).ready(function ($) {
+   $(".in-app a").click(function(e){
+     // alert('test');
+     // console.log(this.href);
+     window.open(this.href, '_blank', 'location=no');
+     e.preventDefault();
+   });
+ });
+
