@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
     // alert('test');
     console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
-    ref.addEventListener('loadstart', function() { alert(event.url); });
+    ref.addEventListener('loadstart', function(event) { alert(event.url); });
     //ref.addEventListener('loadstart', function() { alert(event.url); });
 
 
