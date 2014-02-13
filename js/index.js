@@ -66,9 +66,9 @@ jQuery(document).ready(function ($) {
   $(".in-app a").click(function(e){
     // alert('test');
     // console.log(this.href);
-    var ref = window.open(this.href, '_blank', 'location=no');
+    var ref = window.open('#', '_blank', 'location=no');
 
-    ref.addEventListener('loadstart', function(event) { alert(event.url); checkURL(event.url);  });
+    ref.addEventListener('loadstart', function(event) { alert(event.url . ' ' . this.href); checkURL(this.href);  });
     // ref.addEventListener('loadstop', function() {
     //     // ref.executeSript({file: "./js/link_handler.js"});
     //     alert('scriot loaded' . event.url);
