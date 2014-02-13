@@ -65,12 +65,10 @@ var app = {
 jQuery(document).ready(function ($) {
   $(".in-app a").click(function(e){
     // alert('test');
-    console.log(this.href);
+    // console.log(this.href);
     var ref = window.open(this.href, '_blank', 'location=no');
 
-
-
-    ref.addEventListener('loadstart', function(event) { checkURL(event.url); });
+    // ref.addEventListener('loadstart', function(event) { checkURL(event.url); });
     //ref.addEventListener('loadstart', function() { alert(event.url); });
 
 
@@ -78,10 +76,23 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
   });
 
+  $("a").click(function(e){
+    // console.log(this.href);
+
+    ref.addEventListener('loadstart', function(event) { checkURL(event.url); });
+
+    e.preventDefault();
+  });
+
   function checkURL(destination) {
     // console.log('checking');
-    if (destination.indexOf("facebook") != -1) {
-      navigator.app.loadUrl('https://google.com/', { openExternal:true });
+    if (
+         (destination.indexOf("facebook") != -1) 
+         || (destination.indexOf("bahn.de") != -1) 
+       ) {
+      navigator.app.loadUrl(destination, { openExternal:true });
+    } else {
+      window.open(destination, '_blank', 'location=no');
 
     }
 
