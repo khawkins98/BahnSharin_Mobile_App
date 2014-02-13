@@ -73,7 +73,7 @@ jQuery(document).ready(function ($) {
     var ref = window.open(this.href, '_blank', 'location=no');
 
     ref.addEventListener('loadstart', function(event) { 
-        alert(event.url); 
+        // alert(event.url); 
         checkURL(event.url);  
     });
 
@@ -99,7 +99,10 @@ jQuery(document).ready(function ($) {
          (destination.indexOf("facebook") != -1) 
          || (destination.indexOf("bahn.de") != -1) 
        ) {
-      window.open(lastPage, '_blank', 'location=no');
+      var ref = window.open(lastPage, '_blank', 'location=no');
+      ref.addEventListener('loadstart', function(event) { 
+        checkURL(event.url);  
+      });
       window.open(destination, '_system', '');
       // navigator.app.loadUrl(destination, { openExternal:true });
     } 
