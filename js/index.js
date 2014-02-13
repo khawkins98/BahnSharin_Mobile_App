@@ -77,21 +77,9 @@ jQuery(document).ready(function ($) {
         checkURL(event.url);  
     });
 
-    // ref.addEventListener('loadstop', function() {
-    //     // ref.executeSript({file: "./js/link_handler.js"});
-    //     alert('scriot loaded' . event.url);
-    // });
-    // ref.addEventListener('loadstart', function() { alert(event.url); });
-
-
-    // window.open(this.href, '_blank', 'location=no');
     e.preventDefault();
   });
 
-  // $("a").click(function(e){
-  //   checkURL(this.href);
-  //   e.preventDefault();
-  // });
 
   function checkURL(destination) {
     // console.log('checking');
@@ -99,23 +87,22 @@ jQuery(document).ready(function ($) {
          (destination.indexOf("facebook") != -1) 
          || (destination.indexOf("bahn.de") != -1) 
        ) {
+      // open this link in the system browser
+  destination = 'fb://page/527039463984441';
       window.open(destination, '_system', '');
       // navigator.app.loadUrl(destination, { openExternal:true });
+      
+      // and redirect the inappbrowser to the last known good url
       var ref = window.open(lastPage, '_blank', 'location=no');
+      // keep the event listner going
       ref.addEventListener('loadstart', function(event) { 
         checkURL(event.url);  
       });
-    } 
-    else {
+    } else {
+      // Then this is a good url, save it to the memory
       lastPage = destination;
-      alert(lastPage + ' saved');
+      // alert(lastPage + ' saved');
     }
-    //   var ref = window.open(destination, '_blank', 'location=no');
-
-    //   ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
-    //   // window.open(destination, '_blank', 'location=no');
-
-    // }
 
   }
 });
