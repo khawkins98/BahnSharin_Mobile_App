@@ -77,7 +77,7 @@ jQuery(document).ready(function ($) {
   });
 
   $("a").click(function(e){
-    // all links are being handled by the cordova event listner
+    checkURL(this.href);
     e.preventDefault();
   });
 
@@ -89,10 +89,7 @@ jQuery(document).ready(function ($) {
        ) {
       navigator.app.loadUrl(destination, { openExternal:true });
     } else {
-      var ref = window.open(this.href, '_blank', 'location=no');
-
-      ref.addEventListener('loadstart', function(event) { checkURL(event.url); alert(event.url); });
-      // window.open(destination, '_blank', 'location=no');
+      window.open(destination, '_blank', 'location=no');
 
     }
 
